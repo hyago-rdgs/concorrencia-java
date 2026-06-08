@@ -1,0 +1,7 @@
+com\example\concorrencia\domain\Conta.class
+com\example\concorrencia\controller\ContaVersionadaRest.class
+com\example\concorrencia\domain\ContaVersionada.class
+com\example\concorrencia\domain\ContaVersionadaRepo.class
+com\example\concorrencia\ConcorrenciaApplication.class
+com\example\concorrencia\controller\ContaRest.class
+com\example\concorrencia\domain\ContaRepo.class
