@@ -24,6 +24,18 @@ Instrucoes para Execucao
       - Usuario: sa
       - Senha: (vazio)
 
+3. Dados Iniciais (H2 Console)
+
+      Para popular o banco de dados antes de iniciar os testes no JMeter:
+
+      Com a aplicação rodando, acesse: http://localhost:8080/h2-console
+
+      JDBC URL: jdbc:h2:mem:testdb | Usuário: sa | Senha: (vazio)
+
+      Abra o arquivo src/main/resources/import.sql no seu projeto.
+
+      Copie o conteúdo do arquivo, cole na área de comandos do H2 Console e clique em Run.
+
 Plano de Testes (JMeter)
 
 1.  Abra o JMeter.
