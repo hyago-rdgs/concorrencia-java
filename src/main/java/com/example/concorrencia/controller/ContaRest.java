@@ -18,7 +18,6 @@ public class ContaRest {
     @Transactional
     public void depositar(@PathVariable Long id, @RequestParam BigDecimal valor) throws Exception {
         Conta c = repo.findById(id).orElseThrow();
-        Thread.sleep(200);
         c.setSaldo(c.getSaldo().add(valor));
         repo.save(c);
     }
@@ -27,9 +26,7 @@ public class ContaRest {
     @Transactional
     public ResponseEntity<?> saque(@PathVariable Long id, @RequestParam BigDecimal valor) throws Exception {
         Conta c = repo.findById(id).orElseThrow();
-        Thread.sleep(200);
-
-        // Validação: saldo não pode ficar negativo
+        
         if (c.getSaldo().compareTo(valor) < 0) {
             return ResponseEntity.badRequest().body("Saldo insuficiente para saque.");
         }
